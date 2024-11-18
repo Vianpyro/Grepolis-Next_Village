@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Grepolis Island Village Navigation",
+    "version": "1.0",
+    "description": "Adds keyboard shortcuts to navigate through island villages in Grepolis.",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://*.grepolis.com/game/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.grepolis.com/game/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
